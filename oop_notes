@@ -1,2 +1,8 @@
 Object Oriented programming (OOP)
 - Visualize Real World directly into the software world
+
+1. Visualize the actors in the real world -> memory location (data) in the ram (object)
+  - Every object has a data type -> User defined data type (Student) -> (class) class gives a data type to an object.
+  Objects are created from a class. class is like a blueprint for an object
+2. Real world actor attributes -> Attributes of an object
+3. Real world actor actions -> Methods on an object (function)
