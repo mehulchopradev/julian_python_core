@@ -59,5 +59,6 @@ while True:
   elif choice == 4:
     print(math.factorial(n))
   else:
+    # print(n) # will give an error in the first run of the program when the user selects option 5 or something else
     # something ?
     break

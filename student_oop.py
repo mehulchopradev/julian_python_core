@@ -26,7 +26,7 @@ print(Student.count)
 
 
 
-s2 = Student('jane', 11, 'f', 60)
+s2 = Student('jane', 11, 'f', 60, ['93847395','54645646'])
 '''s2.name = 'jane'
 s2.r = 11
 s2.gen = 'f'
@@ -51,3 +51,6 @@ print(s2.get_grade())
 # Student.get_grade(s1)
 
 print(Student.count)
+
+s4 = Student(name='julian', contact_nos=['8687868'], roll=34, gender='m')
+print(s4.get_details())

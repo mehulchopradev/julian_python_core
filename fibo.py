@@ -20,3 +20,5 @@ for v in range(3, n + 1):
   print(c)
 
   a, b = b, c
+
+print(c)
