@@ -13,7 +13,21 @@ print(s3.get_grade())
 # 2. Student.__init__(6000)
 
 
-s1 = Student('mehul', 10, 'm', 90)
+s1 = Student('mehul', 'm', 10, 90)
+
+
+t = s1.get_name_roll()
+print('Tuple printing')
+
+'''name = t[0]
+roll = t[1]'''
+
+name, roll = t # tuple unpacking
+
+print(name)
+print(roll)
+
+
 # Python do internally
 # 1. Reserve some memory in the RAM - 3000
 # 2. Student.__init__(3000, 'mehul', 10, 'm', 90)
