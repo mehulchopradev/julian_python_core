@@ -25,8 +25,12 @@ class Student:
     return Student.count
 
   def get_details(self):
-    str1 = 'Name : ' + str(self.name) + '\nGender : ' + str(self.gender) + '\nRoll : ' + str(self.roll)\
-    + '\nMarks : ' + str(self.marks) + '\n'
+    '''str1 = 'Name : ' + str(self.name) + '\nGender : ' + str(self.gender) + '\nRoll : ' + str(self.roll)\
+    + '\nMarks : ' + str(self.marks) + '\n'''''
+
+    # str1 = 'Name: {0}\nGender: {1}\nRoll: {2}\nMarks: {3}\n'.format(self.name, self.gender, self.roll, self.marks)
+    str1 = 'Name: {name}\nGender: {gender}\nRoll: {roll}\nMarks: {marks}\n'\
+        .format(gender=self.gender, roll=self.roll, name=self.name, marks=self.marks)
 
     str2 = 'Contact Nos : \n'
     if self.contact_nos:
