@@ -1,64 +1,22 @@
-class Student:
-  count = 0 # class attribute
+from .college_user import CollegeUser
 
-  def __init__(self, name=None, gender=None, roll=None, marks=None, contact_nos=[]): # constructor overloading
-    # None -> Variable is created but with no value (no address/no object)
-    # None -> falsy in python
-
-    # called during object creation
-    # create attributes in an object
-
-    # constructor
-
-    # attributes of the object
-    self.name = name
-    self.gender = gender
+class Student(CollegeUser):
+  def __init__(self, name=None, gender=None, roll=None, marks=None, contact_nos=[]):
+    super().__init__(name, gender, contact_nos)
     self.roll = roll
     self.marks = marks
-    self.contact_nos = contact_nos
 
-    Student.count += 1 # access class attriute using the class name
-
-  def get_count():
-    # class functions
-    # does not have self
-    return Student.count
-
+  # method overriding
   def get_details(self):
-    '''str1 = 'Name : ' + str(self.name) + '\nGender : ' + str(self.gender) + '\nRoll : ' + str(self.roll)\
-    + '\nMarks : ' + str(self.marks) + '\n'''''
+    #self - Will and awill always be a Student object
+    part1 = super().get_details()
+    # CollegerUser.get_details(self)
 
-    # str1 = 'Name: {0}\nGender: {1}\nRoll: {2}\nMarks: {3}\n'.format(self.name, self.gender, self.roll, self.marks)
-    str1 = 'Name: {name}\nGender: {gender}\nRoll: {roll}\nMarks: {marks}\n'\
-        .format(gender=self.gender, roll=self.roll, name=self.name, marks=self.marks)
+    # your own implementation
+    part2 = '\nRoll : {0}'.format(self.roll)
 
-    str2 = 'Contact Nos : \n'
-    if self.contact_nos:
-      '''for contact_no in self.contact_nos:
-        str2 += str(contact_no) + '\n'
-      '''
-      str2 += '\n'.join(self.contact_nos)
-    else:
-      str2 += 'NA'
-    
-    return str1 + str2
+    # inherited implementation + my own implementation
+    return part1 + part2
 
-  def get_grade(self):
-    marks = self.marks
-    if not marks: # None protection
-      print('Cannot compute grade')
-      return None
-
-    if marks < 0 or marks > 100:
-      return 'I'
-    elif marks >= 70:
-      return 'A'
-    elif marks >= 60:
-      return 'B'
-    elif marks >= 40:
-      return 'C'
-    else:
-      return 'F'
-
-  def get_name_roll(self):
-    return (self.name, self.roll)
+  def __str__(self):
+    return super().__str__() + 'Roll : {0}'.format(self.roll)
