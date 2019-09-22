@@ -1,8 +1,9 @@
 from com.abc.lib.college.professor import Professor
 from com.abc.lib.college.student import Student
 
-p1 = Professor('mehul', 'm', ['Physics', 'Maths'], 'mehul.chopra.dev@gmail.com')
-p1.send_daily_email('Hi. This is ur daily news letter')
+p1 = Professor('mehul', 'm', ['Physics', 'Maths'], 'mehul.chopra.dev@gmail.com', '987868687')
+print(p1.get_details())
+# p1.send_daily_email('Hi. This is ur daily news letter')
 # Professor.send_daily_email(p1, 'Hi. This is ur daily news letter')
 # DailyEmail.send_daily_email(p1, 'Hi. This is ur daily news letter')
 
@@ -16,18 +17,18 @@ p1.send_daily_email('Hi. This is ur daily news letter')
 # Professor.get_details(p1)
 # CollegerUser.get_details(p1)
 
-s1 = Student('julian', 'm', 10, 93, ['98789789', '986868898'])
+# s1 = Student('julian', 'm', 10, 93, ['98789789', '986868898'])
 
 # print(s1.get_details())
 # Student.get_details(s1)
 
-i = 10
+# i = 10
 
-print(i)
+# print(i)
 # int.__str__(i)
 
-print(p1) # name, gender
+# print(p1) # name, gender
 # Professor.__str__(p1)
 
-print(s1) # name, gender, roll
+# print(s1) # name, gender, roll
 # Student.__str__(s1)

@@ -7,7 +7,12 @@ class CollegeUser: # class CollegeUser(object)
     # self - Can be any subclass/child class object of CollegeUser
     self.name = name
     self.gender = gender
-    self.contact_nos = contact_nos
+    # self.contact_nos = contact_nos
+    if isinstance(contact_nos, list):
+      self.contact_nos = contact_nos
+    else:
+      raise TypeError('Contact nos should be of type list')
+
 
   def get_details(self):
     # self - Can be any subclas/child class object of CollegerUser
