@@ -1,7 +1,7 @@
 from .college_user import CollegeUser
 
 class Student(CollegeUser):
-  def __init__(self, name=None, gender=None, roll=None, marks=None, contact_nos=[]):
+  def __init__(self, name=None, gender=None, roll=None, marks=None, contact_nos=None):
     super().__init__(name, gender, contact_nos)
     self.roll = roll
     self.marks = marks
@@ -20,3 +20,16 @@ class Student(CollegeUser):
 
   def __str__(self):
     return super().__str__() + 'Roll : {0}'.format(self.roll)
+
+  def __gt__(self, other):
+    return self.marks > other.marks
+
+  def __lt__(self, other):
+    return self.marks < other.marks
+
+  def __lshift__(self, contact_no):
+    self.contact_nos.append(contact_no)
+    return self
+
+  def __eq__(self, other):
+    return self.roll == other.roll
